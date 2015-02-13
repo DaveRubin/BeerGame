@@ -1,0 +1,15 @@
+.header{
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  height: $header-height;
+  line-height: $header-height;
+  text-align: center;
+  .toggle-sidemenu{
+    position: absolute;
+    left: 0;
+    width: $header-height;
+    text-align: center;
+    display: inline-block;
+  }
+}
