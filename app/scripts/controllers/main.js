@@ -5,7 +5,10 @@ angular.module('beerGameApp')
 
         $scope.players = [new Player()];
 
-
+        $scope.addPlayer = function(){
+            console.log("a");
+          $scope.players.push(new Player());
+        };
         $scope.toggleSidebar = function () {
             console.log("toggle");
         };
