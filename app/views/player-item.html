@@ -1,0 +1,57 @@
+
+    <div class="avatar-container"
+            ng-click="
+            toggleEdit(player)">
+        <img class="avatar"
+             ng-src="{{player.avatar}}"
+             alt="{{player.avatar}}"/>
+    </div>
+
+    <div class="details-box" ng-class="{ edit :  player.edit}">
+        <div class="top-point"></div>
+
+        <div class="content">
+            <div class="field">
+
+                <div class="field-name">
+                    אני:
+                </div>
+
+                <div class="options" >
+
+                    <div class="option" ng-click="player.gender = 'male'"
+                         ng-class="{selected : player.gender == 'male'}">
+                        גבר
+                    </div>
+
+                    <div class="option" ng-click="player.gender = 'female'"
+                         ng-class="{selected : player.gender == 'female'}">
+                        אשה
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+
+                <div class="field-name">
+    {{player.gender == 'male' ?
+                    "נמשך:"
+                    :
+                    "נמשכת:"
+                    }}
+                </div>
+
+                <div class="options" >
+
+                    <div class="option" ng-click="player.attractedTo = 'male'"
+                         ng-class="{selected : player.attractedTo == 'male'}">
+                        גברים
+                    </div>
+
+                    <div class="option" ng-click="player.attractedTo = 'female'"
+                         ng-class="{selected : player.attractedTo == 'female'}">
+                        נשים
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
