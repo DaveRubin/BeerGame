@@ -6,6 +6,7 @@ angular.module('beerGameApp')
             this.avatar = "images/jinjo.png";
             this.gender = "male";
             this.attractedTo = "female";
+            this.step = 0;
         };
 
         // Public API here
