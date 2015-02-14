@@ -1,9 +1,18 @@
 @import "vars";
+@import "mixins";
 @import "sideBar";
 @import "userSelection";
 
 // bower:scss
 // endbower
+
+button{
+  border: none;
+  &:focus{
+    outline: none;
+  }
+}
+
 a{
   text-decoration: none;
 }

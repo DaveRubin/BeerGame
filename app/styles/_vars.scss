@@ -1,8 +1,13 @@
 $header-height: 60px;
 $padding: 15px;
-$avatar-size: 100px;
+$avatar-size: 90px;
 $triangle-size: 20px;
 
+$orange-color: #EEAF4B;
+$grey-color: #546979;
 
-$details-box-color : black;
+
+$details-box-color : $grey-color;
 $button-border:5px;
+
+$animation-time: 0.2s;
