@@ -9,6 +9,7 @@
 button{
   border: none;
   border-radius: $button-radius;
+
   &:focus{
     outline: none;
   }
@@ -16,6 +17,7 @@ button{
 
 a{
   text-decoration: none;
+
   &:focus{
     outline: none;
   }
