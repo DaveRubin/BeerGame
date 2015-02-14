@@ -47,7 +47,8 @@ user-selection{
               border-radius:  $button-border 0 0 $button-border ;
             }
             &.selected{
-              background-color: orange;
+              background-color: white;
+              color: black;
             }
           }
         }
