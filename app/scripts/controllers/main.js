@@ -1,19 +1,15 @@
 'use strict';
 
 angular.module('beerGameApp')
-    .controller('MainCtrl', function ($scope,Player) {
+    .controller('MainCtrl', function ($scope,Player,Config) {
 
         $scope.players = [new Player()];
+        $scope.config = Config;
 
-        $scope.state = "opening"; //pre-turn,  turn, menu
+        $scope.state = Config.STATE_OPENING ; //pre-turn,  turn, menu
 
         $scope.toggleSidebar = function () {
-            console.log("toggle");
+            $scope.menuOpen = !$scope.menuOpen;
         };
 
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
     });

@@ -3,9 +3,9 @@
 angular.module('beerGameApp')
     .factory('Player', function () {
         var Player = function (avatar, gender, attractedTo) {
-            this.avatar = "images/jinjo.png";
-            this.gender = "male";
-            this.attractedTo = "female";
+            this.avatar = 'images/jinjo.png';
+            this.gender = 'male';
+            this.attractedTo = 'female';
             this.step = 0;
         };
 

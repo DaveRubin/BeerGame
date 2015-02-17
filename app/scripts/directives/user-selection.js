@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('beerGameApp')
-    .directive('userSelection', function (Player,$timeout) {
+    .directive('userSelection', function (Player,Config,$timeout) {
         return {
             templateUrl: "views/user-selection.html",
             restrict: 'E',
@@ -9,7 +9,8 @@ angular.module('beerGameApp')
                 var OPENING_DELAY = 50;
 
                 scope.startGame = function(){
-                    console.log("A");
+
+                    scope.state = Config.STATE_PRE_TURN;
                 };
 
                 scope.addPlayer = function(){
