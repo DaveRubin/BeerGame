@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('beerGameApp')
-    .factory('Player', function () {
+    .factory('Player', function (Avatars) {
         var Player = function (avatar, gender, attractedTo) {
-            this.avatar = 'images/jinjo.png';
+            this.avatar = Avatars.getAvatar();
             this.gender = 'male';
             this.attractedTo = 'female';
             this.step = 0;

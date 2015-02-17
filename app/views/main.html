@@ -6,5 +6,8 @@
 </div>
 
 <user-selection ng-if="state == config.STATE_OPENING ">
-
 </user-selection>
+<main-game ng-if="state == config.STATE_PRE_TURN ||
+                state == config.STATE_TURN">
+
+</main-game>

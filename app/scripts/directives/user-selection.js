@@ -9,8 +9,8 @@ angular.module('beerGameApp')
                 var OPENING_DELAY = 50;
 
                 scope.startGame = function(){
-
-                    scope.state = Config.STATE_PRE_TURN;
+                    console.log("A");
+                    scope.setState( Config.STATE_PRE_TURN);
                 };
 
                 scope.addPlayer = function(){
