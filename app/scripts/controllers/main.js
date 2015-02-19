@@ -16,5 +16,4 @@ angular.module('beerGameApp')
         $scope.toggleSidebar = function () {
             $scope.menuOpen = !$scope.menuOpen;
         };
-
     });

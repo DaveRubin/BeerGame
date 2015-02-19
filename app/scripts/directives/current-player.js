@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('beerGameApp')
-    .directive('carouselControl', function (Config) {
+    .directive('currentPlayer', function (Config) {
         return {
-            restrict: 'A',
+            restrict: 'E',
+            templateUrl:'views/current-player.html',
             link: function postLink(scope, element, attrs) {
                 var numPlayers = scope.players.length;
                 scope.$watch('currentPlayer',function(currentPlayer){
@@ -12,11 +13,11 @@ angular.module('beerGameApp')
                             var player = scope.players[i];
                             if (i == currentPlayer){
                                 player.position = Config.POSITION_CURRENT;
-                                if (numPlayers ==2) player.position+=" dual";
+                                if (numPlayers ==2) player.position+=" dual ";
                             }
                             else if (numPlayers == 2 ){
                                 if ( i != currentPlayer )
-                                    player.position = Config.POSITION_OUT;
+                                    player.position = Config.POSITION_OUT +" dual";
                             }
                             else{
                                 if ((i + 1) % numPlayers == currentPlayer)
@@ -25,6 +26,9 @@ angular.module('beerGameApp')
                                     player.position = Config.POSITION_PAST;
                                 else player.position = Config.POSITION_OUT;
 
+                                if (numPlayers == 4){
+                                    player.position += " max"
+                                }
                             }
                         }
                     }
