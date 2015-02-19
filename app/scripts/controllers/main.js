@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('beerGameApp')
-    .controller('MainCtrl', function ($scope,Player,Config) {
-
+    .controller('MainCtrl', function ($scope, Player, Config, MissionsDB) {
+        $scope.database = MissionsDB;
         $scope.players = [new Player(),new Player(),new Player(),new Player()];
         $scope.config = Config;
 

@@ -2,8 +2,10 @@
 @import "mixins";
 @import "sideBar";
 @import "userSelection";
+@import "playerItem";
 @import "mainGame";
 @import "currentPlayer";
+@import "missionCard";
 
 // bower:scss
 // endbower
@@ -19,7 +21,8 @@
 button{
   border: none;
   border-radius: $button-radius;
-
+  width: $button-width;
+  height: $button-height;
   &:focus{
     outline: none;
   }

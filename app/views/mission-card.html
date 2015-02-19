@@ -1,0 +1,25 @@
+<div class="mission-title">
+
+    <h2 class="title-text" ng-if="mission.type == 'pre-turn' ">
+        <span>
+            שחקן
+        </span>
+        <span>{{currentPlayer + 1}}</span>
+    </h2>
+
+</div>
+<div class="mission-body" ng-class="mission.type">
+
+    <p class="primary-text">
+
+    </p>
+    <p class="secondary-text">
+
+    </p>
+
+    <div class="actions-container">
+        <button ng-repeat="button in mission.buttons">
+            {{button.text}}
+        </button>
+    </div>
+</div>

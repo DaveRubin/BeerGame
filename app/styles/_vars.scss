@@ -1,4 +1,7 @@
-$button-radius:5px;
+$button-radius: 5px;
+$button-width: 90px;
+$button-height: 30px;
+
 $header-height: 60px;
 $padding: 15px;
 $avatar-size: 100px;
@@ -6,15 +9,19 @@ $triangle-size: 20px;
 
 $padding: 30px;
 
-$orange-color: #EEAF4B;
-$grey-color: #546979;
+$orange: #EEAF4B;
+$light-grey: #546979;
+$dark-grey: #2A3034;
 $black: #212324;
 
-
-$details-box-color : $grey-color;
-$button-border:5px;
+$details-box-color: $light-grey;
+$button-border: 5px;
 
 $animation-time: 0.2s;
 //avatar carousel
 $carousel-opacity: 0.3;
 $masker-color: $black;
+
+//mission-card
+$mission-title-height: 50px;
+$top-height: 2 * $padding + $header-height + $mission-title-height + $avatar-size;

@@ -1,0 +1,26 @@
+
+mission-card{
+  .mission-title{
+    background-color: $black;
+    height: $mission-title-height;
+    .title-text{
+      margin: 0;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+  .mission-body{
+    background-color: $dark-grey;
+    height: calc( 100% - #{$top-height} );
+    width: 100%;
+    display: block;
+    position: absolute;
+    .actions-container{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+    }
+  }
+}

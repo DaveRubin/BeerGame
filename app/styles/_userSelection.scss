@@ -1,4 +1,4 @@
-@import "playerItem";
+
 user-selection{
   text-align: center;
 
@@ -21,9 +21,7 @@ user-selection{
   }
   .start-game{
     button{
-      width: $avatar-size;
-      height: $avatar-size / 3;
-      background-color: $orange-color;
+      background-color: $orange;
       color: white;
     }
   }
