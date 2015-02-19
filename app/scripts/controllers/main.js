@@ -3,7 +3,7 @@
 angular.module('beerGameApp')
     .controller('MainCtrl', function ($scope,Player,Config) {
 
-        $scope.players = [new Player(),new Player()];
+        $scope.players = [new Player(),new Player(),new Player(),new Player()];
         $scope.config = Config;
 
         $scope.state = Config.STATE_OPENING ; //pre-turn,  turn, menu

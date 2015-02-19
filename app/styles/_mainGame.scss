@@ -1,3 +1,4 @@
+$carousel-opacity: 0.3;
 main-game{
 
   .current-player{
@@ -23,19 +24,19 @@ main-game{
         z-index: 1;
       }
       .player{
-        transition: left $animation-time, z-index $animation-time*2;
-        left: 0;
+//        transition: left $animation-time, z-index $animation-time*2;
+//        left: 0;
         position: absolute;
 
         .avatar{
           transition: opacity $animation-time;
           position: relative;
           left: -50%;
-          opacity: 0.3;
+//          opacity: 0.3;
         }
 
         &.current{
-          transition: left $animation-time, z-index 0;
+          @include animation(enterCurrent $animation-time);
           z-index: 2;
           left: 50%;
 
@@ -48,19 +49,51 @@ main-game{
         }
 
         &.next{
+          @include animation(enterNext $animation-time);
           left: 0;
+          opacity: $carousel-opacity;
         }
 
         &.past{
+          @include animation(enterPast $animation-time);
+          opacity: $carousel-opacity;
           left: 100%;
         }
 
         &.out{
-          transition: left $animation-time, z-index 0;
+          @include animation(enterOut $animation-time);
           left: -$avatar-size/2;
         }
-
       }
     }
   }
+}
+
+@include keyframes(enterCurrent) {
+  from  {left: 100%;
+  opacity: $carousel-opacity}
+  to    {left: 50%;
+  opacity: 1}
+}
+
+@include keyframes(enterOut) {
+  0%  { left: 50%;
+        z-index:2}
+  99% { left: -$avatar-size/2 ;
+        z-index:2}
+  100%{ z-index:0}
+}
+
+@include keyframes(enterPast) {
+  0%  { left: 0;
+        z-index: 0;}
+  100% { left: 100%  }
+}
+@include keyframes(enterNext) {
+  0%  { left: 50%;
+        opacity: 1;
+        z-index:2}
+  100% { left: 0 ;
+        opacity: $carousel-opacity ;
+        z-index:2}
 }
