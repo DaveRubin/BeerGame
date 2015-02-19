@@ -1,1 +1,3 @@
-<div class="top header"><a class="toggle-sidemenu" ng-click="toggleSidebar()"><i class="fa fa-bars"></i></a> בלי משחקים</div><user-selection></user-selection>
+<div class="top header"><a class="toggle-sidemenu" ng-click="toggleSidebar()"><i class="fa fa-bars"></i></a> בלי משחקים</div><user-selection ng-if="state == config.STATE_OPENING "></user-selection><main-game ng-if="database.isLoaded" ng-if="database.isLoaded &&
+            (state == config.STATE_PRE_TURN ||
+            state == config.STATE_TURN)"></main-game>
