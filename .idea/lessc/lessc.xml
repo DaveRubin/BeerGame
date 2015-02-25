@@ -9,13 +9,13 @@
               <option name="cssDirectories">
                 <list>
                   <CssDirectory>
-                    <option name="path" value="$PROJECT_DIR$/../../PathFinder/css" />
+                    <option name="path" value="$USER_HOME$/PathFinder/css" />
                   </CssDirectory>
                 </list>
               </option>
               <option name="excludePattern" value="_*" />
               <option name="id" value="0" />
-              <option name="lessDirPath" value="$PROJECT_DIR$/../../PathFinder/less" />
+              <option name="lessDirPath" value="$USER_HOME$/PathFinder/less" />
               <option name="name" value="less-test" />
             </LessProfile>
           </value>

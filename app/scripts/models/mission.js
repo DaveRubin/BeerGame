@@ -18,9 +18,9 @@ angular.module('beerGameApp')
                 that.buttons = [];
                 that.id = data.title.$t;
                 //clear spaces from content string
-                data.content.$t = data.content.$t.replace(/, /g, ',');
+//                data.content.$t = data.content.$t.replace(/, /g, ',');
 
-                angular.forEach(data.content.$t.split(","), function(pair) {
+                angular.forEach(data.content.$t.split(", "), function(pair) {
                     tmpArr = pair.split(": ");
                     that[tmpArr[0]] = tmpArr[1];
                 });
