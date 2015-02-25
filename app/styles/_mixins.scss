@@ -21,3 +21,25 @@
   -o-animation: #{$str};
   animation: #{$str};
 }
+
+@mixin dual-animation($str1,$str2) {
+  -webkit-animation: #{$str1},#{$str2};
+  -moz-animation: #{$str1},#{$str2};
+  -ms-animation: #{$str1},#{$str2};
+  -o-animation: #{$str1},#{$str2};
+  animation: #{$str1},#{$str2};
+}
+
+@mixin triple-animation($str1,$str2,$str3) {
+  -webkit-animation: #{$str1},#{$str2},#{$str3};
+  -moz-animation: #{$str1},#{$str2},#{$str3};
+  -ms-animation: #{$str1},#{$str2},#{$str3};
+  -o-animation: #{$str1},#{$str2},#{$str3};
+  animation: #{$str1},#{$str2},#{$str3};
+}
+
+@mixin transform ($str){
+  -ms-transform: #{$str}; /* IE 9 */
+  -webkit-transform: #{$str}; /* Chrome, Safari, Opera */
+  transform: #{$str};
+}

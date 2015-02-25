@@ -13,10 +13,18 @@
 
 <div class="top-point"></div>
 
+<div class="color-fan" ng-if="fanAnimation">
+    <div class="color a"></div>
+    <div class="color b"></div>
+    <div class="color c"></div>
+    <div class="color d"></div>
+    <div class="color e"></div>
+</div>
+
 <div class="mission-body" ng-class="mission.type">
     <div class="roll-the-dice"
             ng-if="mission.type == config.MISSION_TYPE_PRE_TURN ">
-            <button>
+            <button ng-click="startFan()">
                 שחק!
             </button>
     </div>
